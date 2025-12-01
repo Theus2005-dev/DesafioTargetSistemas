@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-public class Root
+public class Lista
 {
     [JsonPropertyName("estoque")]
     public List<Produto> Estoque { get; set; }
@@ -60,27 +60,27 @@ public class program
 	          }
 	        ]
         }";
-        var root = jsonSerializer.Deserialize<Root>(json);
+        var root = JsonSerializer.Deserialize<Lista>(json);
         Console.WriteLine("====Movimentação de estoque====");
 
         Console.WriteLine("informe o código do produto.");
         int cod = int.Parse(Console.ReadLine());
 
-        var produto = root.FirstOrDefault(produto => produto.codigoProduto == cod);
+        var produto = root.Estoque.FirstOrDefault(produto => produto.CodigoProduto == cod);
         if (produto == null)
         {
             Console.WriteLine("produto não encontrado");
             return;
         }
 
-        Console.WriteLine($"Produto econtrado:{produto.descricaoProduto}");
-        Console.WriteLine($"Estoque atual:{produto.estoque}");
+        Console.WriteLine($"Produto econtrado:{produto.DescricaoProduto}");
+        Console.WriteLine($"Estoque atual:{produto.QtdEstoque}");
 
         Console.WriteLine("Digite E para entrada ou S para saída.");
         string tipo = Console.ReadLine().ToUpper();
 
         Console.WriteLine("Quantidade:");
-        int qntd = int.Parse(Console.WriteLine());
+        int qntd = int.Parse(Console.ReadLine());
 
         var mov = new Movimentacao
         {
@@ -103,7 +103,7 @@ public class program
         Console.WriteLine($"Descrição: {mov.Descricao}");
         Console.WriteLine($"Quantidade Movimentada: {mov.Quantidade}");
 
-        Console.WriteLine($"Estoque final do produto {produto.descricaoProduto}: {produto.estoque}");
+        Console.WriteLine($"Estoque final do produto {produto.DescricaoProduto}: {produto.QtdEstoque}");
 
 
     }
