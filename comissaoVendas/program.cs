@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
@@ -31,7 +31,7 @@ public class Venda
     }
 }
 
-public class Programa
+public class Program
 {
     public static void Main()
     {

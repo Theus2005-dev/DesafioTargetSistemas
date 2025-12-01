@@ -1,0 +1,15 @@
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\bin\Debug\net10.0\movimentacaoEstoque.exe
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\bin\Debug\net10.0\movimentacaoEstoque.deps.json
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\bin\Debug\net10.0\movimentacaoEstoque.runtimeconfig.json
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\bin\Debug\net10.0\movimentacaoEstoque.dll
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\bin\Debug\net10.0\movimentacaoEstoque.pdb
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.AssemblyInfoInputs.cache
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.AssemblyInfo.cs
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.sourcelink.json
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.dll
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\refint\movimentacaoEstoque.dll
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.pdb
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\movimentacaoEstoque.genruntimeconfig.cache
+C:\Users\USUARIO\comissaovendedor\movimentacaoEstoque\obj\Debug\net10.0\ref\movimentacaoEstoque.dll
