@@ -5,32 +5,36 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 
-public class Root {
+public class Root
+{
     [JsonPropertyName("vendas")]
-    public List<Venda> Vendas{get; set;}
+    public List<Venda> Vendas { get; set; }
 }
 
 public class Venda
 {
     [JsonPropertyName("vendedor")]
-    public string Vendedor{get;set;}
-    
+    public string Vendedor { get; set; }
+
     [JsonPropertyName("valor")]
-    public double Valor{get;set;}
-    
-    public double CalcularComissao(){
-        if(Valor < 100)
+    public double Valor { get; set; }
+
+    public double CalcularComissao()
+    {
+        if (Valor < 100)
             return 0;
-        if(Valor < 500)
+        if (Valor < 500)
             return Valor * 0.01;
-        
+
         return Valor * 0.05;
-        
+
     }
 }
 
-public class Program{
-    public static void Main(){
+public class Programa
+{
+    public static void Main()
+    {
         string jsonData = @"
 {
   ""vendas"": [
@@ -76,26 +80,28 @@ public class Program{
   ]
 }
 ";
-         Root dados =JsonSerializer.Deserialize<Root>(jsonData);
-        
-        if(dados == null || dados.Vendas == null){
+        Root dados = JsonSerializer.Deserialize<Root>(jsonData);
+
+        if (dados == null || dados.Vendas == null)
+        {
             Console.WriteLine("Dados nulos");
             return;
         }
-        
+
         var comissaoPorVendedor = dados.Vendas
             .GroupBy(v => v.Vendedor)
-            .Select(g => new 
-                    {
-                    Vendedor = g.Key,
-                    TotalComissao = g.Sum(v => v.CalcularComissao())
-                    }
+            .Select(g => new
+            {
+                Vendedor = g.Key,
+                TotalComissao = g.Sum(v => v.CalcularComissao())
+            }
                    );
         Console.WriteLine("\n =====Total por vendedor=====");
-        
-        foreach(var item in comissaoPorVendedor){
+
+        foreach (var item in comissaoPorVendedor)
+        {
             Console.WriteLine($"{item.Vendedor}: {item.TotalComissao:C2}");
         }
-        
+
     }
 }
